@@ -18,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-           python-version: '3.x'
+           python-version: '3.11'
 
       - name: Check Out
         uses: actions/checkout@main
@@ -26,7 +26,6 @@ jobs:
       - name: Prepare the environment
         run: |
          python3 -m pip install --upgrade pip
-         pip3 install -r requirements.txt
          sudo apt -y install cpio wget
          pip3 install twrpdtgen
          mkdir dt
